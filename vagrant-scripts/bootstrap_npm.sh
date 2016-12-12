@@ -11,10 +11,11 @@ sed -i '/tty/!s/mesg n/tty -s \\&\\& mesg n/' /root/.profile
  
 echo 'Provisioning npm on virtual machine...'
 echo `whoami`
-apt-get update > /dev/null 2>&1
-apt-get install -y build-essential > /dev/null 2>&1
+yes| apt-get update > /dev/null 2>&1
+yes | apt-get upgrade > /dev/null 2>&1
+yes | apt-get install -y build-essential > /dev/null 2>&1
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-apt-get install -y nodejs > /dev/null 2>&1
+yes | apt-get install -y nodejs > /dev/null 2>&1
 
 
 mkdir /home/ubuntu/.npm-global

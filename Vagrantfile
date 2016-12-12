@@ -76,9 +76,10 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
   # config.vm.provision :shell, path: "bootstrap.sh"
-  config.vm.provision "conda-root", type: "shell", path:  "vagrant-scripts/bootstrap_conda.sh" 
-  config.vm.provision "npm-root", type: "shell", path:  "vagrant-scripts/bootstrap_npm.sh"
-  config.vm.provision "npm-user", type: "shell",path: "vagrant-scripts/bootstrap_npm_user.sh", privileged: false
+
+  # config.vm.provision "conda-root", type: "shell", path:  "vagrant-scripts/bootstrap_conda.sh" 
+  # config.vm.provision "npm-root", type: "shell", path:  "vagrant-scripts/bootstrap_npm.sh"
+  # config.vm.provision "npm-user", type: "shell",path: "vagrant-scripts/bootstrap_npm_user.sh", privileged: false
   config.vm.provision "haxe-root", type: "shell", path:  "vagrant-scripts/bootstrap_haxe.sh" 
   config.vm.provision "haxe-user", type: "shell",path: "vagrant-scripts/bootstrap_haxe_user.sh", privileged: false
   config.vm.provision "finally", type: "shell", path:  "vagrant-scripts/bootstrap_finally.sh" 
@@ -86,10 +87,12 @@ Vagrant.configure("2") do |config|
 
 
   #pull the geth /ethereum image
-  config.vm.provision "docker",images: ["ethereum/client-go"]
+  # config.vm.provision "docker",images: ["ethereum/client-go"]
   
   
   #Reboot the system
   config.vm.provision :reload
+  # config.vm.provision "finally2", type: "shell", path:  "vagrant-scripts/bootstrap_finally.sh" 
+  
   
 end
