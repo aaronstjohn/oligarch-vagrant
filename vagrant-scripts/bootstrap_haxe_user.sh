@@ -9,3 +9,4 @@ sudo yes | haxelib git minject https://github.com/massiveinteractive/minject.git
 sudo yes | haxelib git ash https://github.com/nadako/Ash-Haxe.git
 sudo yes | haxelib git hxmath https://github.com/tbrosman/hxmath.git 
 sudo yes | haxelib git openfl-gui https://github.com/tienery/openfl-gui.git 
+sudo yes | haxelib git hxrandom https://github.com/jasononeil/hxrandom.git
